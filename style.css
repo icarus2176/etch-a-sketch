@@ -1,0 +1,11 @@
+#grid{
+    height: 960px;
+    width: 960px;
+    border-color: black;
+}
+
+.box{
+    border-color: black;
+    color: black;
+    
+}
