@@ -9,18 +9,25 @@ function askSize(){
 }
 
 function makeGrid(size){
+    const hAndW = 960/size;
     const currentRows = Array.from(document.querySelectorAll('.row'));
     currentRows.forEach(row => row.remove());
     const row = [size]
     for(let i = 0; i < size; i++){
         row[i] = document.createElement('div');
         row[i].classList.add('row');
+        row[i].style.display = 'flex';
+        row[i].style.width = '960px';
+        row[i].style.height = hAndW + 'px';
         grid.appendChild(row[i]);
 
         for(let j = 0; j < size; j++){
             const eachBox = [size];
             eachBox[j] = document.createElement('div');
             eachBox[j].classList.add('box');
+            eachBox[j].style.width = hAndW + 'px';
+            eachBox[j].style.height = hAndW + 'px';
+            eachBox[j].style.backgroundColor = 'white';
             row[i].appendChild(eachBox[j]);
         }
     }
