@@ -27,7 +27,18 @@ function makeGrid(size){
             eachBox[j].classList.add('box');
             eachBox[j].style.width = hAndW + 'px';
             eachBox[j].style.height = hAndW + 'px';
-            eachBox[j].style.backgroundColor = 'white';
+            eachBox[j].style.backgroundColor = '#ffffff';
+            eachBox[j].addEventListener('mouseover', function() {
+                let n = Math.round((Math.random() * 0xfffff * 1000000)).toString(16);
+                eachBox[j].style.backgroundColor = '#' + n.substring(0,6);
+            })
+
+            eachBox[j].addEventListener('mouseout', function() {                
+                setTimeout(() => {
+                    eachBox[j].style.backgroundColor = '#ffffff'
+                  }, 1000);
+            })
+
             row[i].appendChild(eachBox[j]);
         }
     }

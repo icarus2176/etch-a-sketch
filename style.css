@@ -1,11 +1,8 @@
 #grid{
     height: 960px;
     width: 960px;
-    border-color: red;
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-width: 16px;
     margin-left: auto;
     margin-right: auto;
 }
